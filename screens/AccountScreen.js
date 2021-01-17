@@ -26,13 +26,10 @@ class AccountScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.imageStack}>
-          <Image
-            source={require('../assets/images/blobac.png')}
-            resizeMode='contain'
-            style={styles.image}
-          ></Image>
           <ImageBackground
-            source={require('../assets/images/blobac.png')}
+            source={
+              'https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg'
+            }
             resizeMode='contain'
             style={styles.image1}
             imageStyle={styles.image1_imageStyle}
@@ -40,11 +37,6 @@ class AccountScreen extends Component {
             <View style={styles.rect2}>
               <TouchableOpacity style={styles.rect3}>
                 <View style={styles.image4Row}>
-                  <Image
-                    source={require('../assets/images/email.png')}
-                    resizeMode='contain'
-                    style={styles.image4}
-                  ></Image>
                   <View style={styles.rect6Stack}>
                     <View style={styles.rect6}>
                       <Icon
@@ -60,11 +52,6 @@ class AccountScreen extends Component {
               </TouchableOpacity>
               <TouchableOpacity style={styles.rect4}>
                 <View style={styles.image5Row}>
-                  <Image
-                    source={require('../assets/images/alert.png')}
-                    resizeMode='contain'
-                    style={styles.image5}
-                  ></Image>
                   <View style={styles.rect7Stack}>
                     <View style={styles.rect7}>
                       <Icon
@@ -83,11 +70,6 @@ class AccountScreen extends Component {
                 onPress={this.onLogoutPress}
               >
                 <View style={styles.image6Row}>
-                  <Image
-                    source={require('../assets/images/logout.png')}
-                    resizeMode='contain'
-                    style={styles.image6}
-                  ></Image>
                   <View style={styles.rect8Stack}>
                     <View style={styles.rect8}>
                       <Icon
@@ -103,27 +85,15 @@ class AccountScreen extends Component {
           </ImageBackground>
           <View style={styles.rect1}>
             <View style={styles.image2Stack}>
-              <ImageBackground
-                source={require('../assets/images/oval.png')}
+              <Image
+                source={require('../assets/images/profile-user.png')}
                 resizeMode='contain'
-                style={styles.image2}
-                imageStyle={styles.image2_imageStyle}
-              >
-                <Image
-                  source={require('../assets/images/avatar.png')}
-                  resizeMode='contain'
-                  style={styles.image3}
-                ></Image>
-              </ImageBackground>
+                style={styles.image3}
+              ></Image>
 
               <Text style={styles.useremaEmailCom1}>{security.email}</Text>
               <Text style={styles.useremaEmailCom2}>{security.fullname}</Text>
               <Text style={styles.useremaEmailCom3}>ID: {security.id}</Text>
-              <Image
-                source={require('../assets/images/ilustrators/heart.gif')}
-                resizeMode='contain'
-                style={styles.heart}
-              ></Image>
             </View>
           </View>
         </View>

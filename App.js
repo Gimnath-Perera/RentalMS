@@ -13,6 +13,9 @@ import thunk from 'redux-thunk';
 import useLinking from './navigation/useLinking';
 import FormLoginCustomer from './components/forms/FormLoginCustomer';
 import FormRegisterCustomer from './components/forms/FormRegisterCustomer';
+import ItemDetailedScreen from './screens/ItemDetailedScreen';
+import OrderDetailedScreen from './screens/OrderDetailedScreen';
+import UserDetailedScreen from './screens/UserDetailedScreen';
 
 import CustomerBottomTabNavigator from './navigation/CustomerBottomTabNavigator';
 
@@ -98,6 +101,34 @@ export default function App(props) {
               <Stack.Screen
                 name='HomeCutomer'
                 component={CustomerBottomTabNavigator}
+                options={{
+                  headerTintColor: '#1D446F',
+                  title: '',
+                  headerTransparent: 'true'
+                }}
+              />
+              <Stack.Screen
+                name='ItemDetailed'
+                component={ItemDetailedScreen}
+                options={{
+                  headerTintColor: '#1D446F',
+                  title: '',
+                  headerTransparent: 'true'
+                }}
+              />
+
+              <Stack.Screen
+                name='OrderDetailed'
+                component={OrderDetailedScreen}
+                options={{
+                  headerTintColor: '#1D446F',
+                  title: '',
+                  headerTransparent: 'true'
+                }}
+              />
+              <Stack.Screen
+                name='UserDetailed'
+                component={UserDetailedScreen}
                 options={{
                   headerTintColor: '#1D446F',
                   title: '',

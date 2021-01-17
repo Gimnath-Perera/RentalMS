@@ -44,7 +44,7 @@ class HomeScreen extends Component {
             <View style={styles.image4StackStack}>
               <View style={styles.image4Stack}>
                 <Image
-                  source={require('../assets/images/avatar.png')}
+                  source={require('../assets/images/profile-user.png')}
                   resizeMode='contain'
                   style={styles.image5}
                 ></Image>
@@ -69,13 +69,27 @@ class HomeScreen extends Component {
                 A little description about the thing..
               </Text>
             </View>
-            <Icon name='md-arrow-dropright' style={styles.icon}></Icon>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.rect2} onPress={this.toggleModal}>
           <View style={styles.image7Row}>
             <Image
-              source={require('../assets/images/static/tracking.png')}
+              source={require('../assets/images/static/fastdelivery.png')}
+              resizeMode='contain'
+              style={styles.image7}
+            ></Image>
+            <View style={styles.addABookingColumn}>
+              <Text style={styles.addABooking}>View History</Text>
+              <Text style={styles.loremIpsum}>
+                A little description about the thing..
+              </Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.rect2} onPress={this.toggleModal}>
+          <View style={styles.image7Row}>
+            <Image
+              source={require('../assets/images/static/freeshipping.png')}
               resizeMode='contain'
               style={styles.image7}
             ></Image>
@@ -85,23 +99,6 @@ class HomeScreen extends Component {
                 A little description about the thing..
               </Text>
             </View>
-            <Icon name='md-arrow-dropright' style={styles.icon}></Icon>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.rect2} onPress={this.toggleModal}>
-          <View style={styles.image7Row}>
-            <Image
-              source={require('../assets/images/static/tracking.png')}
-              resizeMode='contain'
-              style={styles.image7}
-            ></Image>
-            <View style={styles.addABookingColumn}>
-              <Text style={styles.addABooking}>Track Oder</Text>
-              <Text style={styles.loremIpsum}>
-                A little description about the thing..
-              </Text>
-            </View>
-            <Icon name='md-arrow-dropright' style={styles.icon}></Icon>
           </View>
         </TouchableOpacity>
         <Modal

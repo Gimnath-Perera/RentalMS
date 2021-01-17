@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import OrdedItemList from '../screens/OrdedItemList';
 import OrdersList from '../screens/OrdersList';
 import AccountScreen from '../screens/AccountScreen';
+import AdminHomeScreen from '../screens/AdminHomeScreen';
 import TabBarLabel from '../components/TabBarLabel';
 
 const BottomTab = createBottomTabNavigator();
@@ -48,10 +49,23 @@ export default function CustomerBottomTabNavigator({ navigation, route }) {
             <TabBarLabel focused={focused} name='Orders' />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name='md-cube' />
+            <TabBarIcon focused={focused} name='md-checkbox' />
           )
         }}
       />
+      <BottomTab.Screen
+        name='AdminHomeScreen'
+        component={AdminHomeScreen}
+        options={{
+          tabBarLabel: ({ focused }) => (
+            <TabBarLabel focused={focused} name='Admin' />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} name='md-options' />
+          )
+        }}
+      />
+
       <BottomTab.Screen
         name='Account'
         component={AccountScreen}

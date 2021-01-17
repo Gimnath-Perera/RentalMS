@@ -8,6 +8,7 @@ import {
   FlatList,
   TouchableOpacity
 } from 'react-native';
+import { Icon } from 'native-base';
 
 const DATA = [
   { id: 1, name: 'Alder', species: 'Alnus' },
@@ -27,21 +28,33 @@ class OrdedItemList extends Component {
       <TouchableOpacity
         style={styles.rect3}
         onPress={() => {
-          this.props.navigation.navigate('DetailedScreen');
+          this.props.navigation.navigate('ItemDetailed');
         }}
       >
         <View style={styles.rect6Row}>
-          <View style={styles.rect6}>
-            <Image
-              source={require('../assets/images/static/freeshipping.png')}
-              resizeMode='center'
-              style={styles.plantImage}
-            ></Image>
-          </View>
           <View style={styles.potatoEralyBrightColumn}>
             <Text style={styles.potatoEralyBright}>Item code: #OR46585</Text>
             <Text style={styles.mangoAppleOrange}>04/10/2021 06:30</Text>
             <Text style={styles.fungens}>Returned</Text>
+          </View>
+          <View style={{ flexDirection: 'row', top: 50 }}>
+            <TouchableOpacity
+              onPress={() => this.toggleModal(booking.item)}
+              style={{ right: 10 }}
+            >
+              <Icon
+                name='md-create'
+                style={{ color: '#064070', fontSize: 24 }}
+              ></Icon>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.onDeleteBooking(booking.item.id)}
+            >
+              <Icon
+                name='md-trash'
+                style={{ color: 'red', fontSize: 24 }}
+              ></Icon>
+            </TouchableOpacity>
           </View>
         </View>
       </TouchableOpacity>

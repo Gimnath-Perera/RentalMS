@@ -27,19 +27,12 @@ class OrdersList extends Component {
       <TouchableOpacity
         style={styles.rect3}
         onPress={() => {
-          this.props.navigation.navigate('DetailedScreen');
+          this.props.navigation.navigate('OrderDetailed');
         }}
       >
         <View style={styles.rect6Row}>
-          <View style={styles.rect6}>
-            <Image
-              source={require('../assets/images/static/freeshipping.png')}
-              resizeMode='center'
-              style={styles.plantImage}
-            ></Image>
-          </View>
           <View style={styles.potatoEralyBrightColumn}>
-            <Text style={styles.potatoEralyBright}>Item code: #OR46585</Text>
+            <Text style={styles.potatoEralyBright}>Oder code: #OR46585</Text>
             <Text style={styles.mangoAppleOrange}>04/10/2021 06:30</Text>
             <Text style={styles.fungens}>Returned</Text>
           </View>
